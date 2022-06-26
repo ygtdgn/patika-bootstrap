@@ -1,0 +1,17 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: center ;
+}
+
+nav {
+    margin: 1rem;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+body {
+    background-color: #E9ECEF;
+}
