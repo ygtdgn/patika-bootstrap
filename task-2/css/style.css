@@ -1,9 +1,16 @@
+body {
+  padding-top: 60px;
+  background: rgb(var(--ig-primary-background));
+}
+
 ::placeholder{
   text-align: center;
   font-size: 14px;
   color: gray;
+  background-image: url("../assets/search-solid.svg");
   background-position: 40%;
   background-size: 6%;
+  background-repeat: no-repeat;
 }
 
 input.empty {
@@ -33,6 +40,10 @@ input.empty {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 12px;
   color: black;
+
+}
+#sticky-sidebar {
+  position: fixed;
 }
 
 .rightpanellinks {
@@ -43,4 +54,29 @@ input.empty {
 .rightpanellinks:hover {
   text-decoration: none;
   color: lightgrey;
+}
+
+.middlearea {
+  max-height: 200px !important;
+}
+
+span.mt-2 {
+  float: right;
+}
+
+.card ul.list-group {
+  border: none;
+}
+
+.card-header, .card-footer {
+  background-color: white;
+}
+
+.paylas {
+  float: right;
+}
+
+.saga_al{
+  float: right;
+  margin-top:3px;
 }

@@ -15,15 +15,106 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/instagramclone/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="asssets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <title>Instagram</title>
+    <style>
+      body {
+  padding-top: 60px;
+  background: rgb(var(--ig-primary-background));
+}
+
+::placeholder{
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+  background-image: url("../assets/search-solid.svg");
+  background-position: 40%;
+  background-size: 6%;
+  background-repeat: no-repeat;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    background-color: #FAFAFA;
+}
+
+.postuserfont {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+
+.storyphoto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(238, 39, 82);
+  margin-right: 7px;
+}
+
+.storytext {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  color: black;
+
+}
+#sticky-sidebar {
+  position: fixed;
+}
+
+.rightpanellinks {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.rightpanellinks:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.middlearea {
+  max-height: 200px !important;
+}
+
+span.mt-2 {
+  float: right;
+}
+
+.card ul.list-group {
+  border: none;
+}
+
+.card-header, .card-footer {
+  background-color: white;
+}
+
+.paylas {
+  float: right;
+}
+
+.saga_al{
+  float: right;
+  margin-top:3px;
+}
+    </style>
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-sm navbar-light border"
+      class="navbar navbar-expand-sm navbar-light border fixed-top"
+      style="background-color: #ffffff; height: 54px"
     >
-      <div class="logo">
-            <a class="navbar-brand" href="#"
+      <div class="ml-lg-5 ">
+        <div class="ml-lg-5">
+          <div class="ml-lg-5">
+            <a class="navbar-brand ml-lg-5 mt-1 mr-5" href="#"
               ><img
                 src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
             /></a>
@@ -39,19 +130,22 @@
               <span class="navbar-toggler-icon mr-5"></span>
             </button>
           </div>
-      <div class="collapse navbar-collapse">
+        </div>
+      </div>
+      <div class="collapse navbar-collapse ml-5 d-flex justify-content-center">
         <form class="form-inline my-2 my-lg-0 ml-5 d-none d-sm-block">
           <input
             class="form-control mr-sm-2 empty"
             type="search"
-            placeholder="Ara"
+            placeholder="    Ara"
             style="font-family: Arial, FontAwesome; height: 28px; width: 216px"
             aria-label="Search"
           />
         </form>
       </div>
       <div
-        class="collapse navbar-collapse"
+        class="collapse navbar-collapse ml-5 mt-2"
+        id="navbarSupportedContent"
       >
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -63,25 +157,25 @@
           <li class="nav-item">
             <a class="nav-link" href="#"
               ><i
-                class="fab fa-facebook-messenger fa-lg mr-2 mt-1"
+                class="fab fa-facebook-messenger fa-lg mr-2 d-none d-sm-block mt-1"
                 style="color: black"
               ></i
             ></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
-              ><i class="far fa-compass fa-lg mr-2 mt-1" style="color: black"></i
+              ><i class="far fa-compass fa-lg mr-2 d-none d-sm-block mt-1" style="color: black"></i
             ></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
-              ><i class="far fa-heart fa-lg mr-2 mt-1" style="color: black"></i
+              ><i class="far fa-heart fa-lg mr-2 d-none d-sm-block mt-1" style="color: black"></i
             ></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/cengizcmataraci" target="_blank"
+            <a class="nav-link d-none d-sm-block" href="https://www.instagram.com/atatorik" target="_blank"
               ><img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320"
+                src="https://pbs.twimg.com/profile_images/1239312474358329356/hvRWDG3r_400x400.jpg"
                 class="mb-2"
                 style="width: 23px; height: 23px; border-radius: 50%;"
             /></a>
@@ -90,71 +184,71 @@
       </div>
     </nav>
 
-    <div class="container middlearea">
+    <div class="container offset-2 mt-4 middlearea">
       <div class="row">
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="card mb-4">
+            <div class="card-body d-flex">
               <a href="https://www.instagram.com/kodluyoruz" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/105971749_581051382486071_1053777149100084988_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=VMAJoeqh5IwAX_QH3Nt&tp=1&oh=3bd9dbd2532c87e350dfcfffec74f120&oe=602BAC27"
+                src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg"
                 class="storyphoto img-fluid mr-3"
               />
               <span class="storytext">kodluyoruz</span>
               </a>
-              <a href="https://www.instagram.com/furkantolgayuce" style="text-decoration: none;" target="_blank">
+              <a href="https://www.instagram.com/yigtdogn" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/72779108_713693839133901_6123578952603664384_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=XqPxbR5poVwAX-ZBLnj&tp=1&oh=8ced290d281ab30c73ecab574c569f2e&oe=602E8762"
+                src="https://pbs.twimg.com/profile_images/1541055030014480386/G7D8MJ-o_400x400.jpg"
                 class="storyphoto img-fluid"
               />
-              <span class="storytext">furkantolga..</span>
+              <span class="storytext">yigtdogn</span>
             </a>
               <a href="https://www.instagram.com/elonrmuskk" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/44329317_268583430479565_454483638147350528_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=nch-8fZvL_kAX-Vwc1_&tp=1&oh=834a7ad23234699addd8c447d3d754e6&oe=602E6230"
+                src="https://static01.nyt.com/images/2020/05/09/business/09virus-musk/merlin_172073934_998b3d35-12fb-4dc2-bf92-4edfe8dc3068-mediumSquareAt3X.jpg"
                 class="storyphoto img-fluid"
               />
               <span class="storytext">elonrmuskk</span>
             </a>
               <a href="https://www.instagram.com/hakanyalcinkaya" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/14032987_493625937508971_230505040_a.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=c5Y_pjOla0AAX99HkoC&tp=1&oh=00f276b589b86e96148f8bd4bc9f9d3d&oe=602DF398"
+                src="https://avatars.githubusercontent.com/u/3310562?v=4"
                 class="storyphoto img-fluid"
               />
             <span class="storytext">hakanyalcin..</span>
             </a>
-              <a href="https://www.instagram.com/ozgeacik" style="text-decoration: none;" target="_blank">
+              <a href="https://www.instagram.com/topuz.mert" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/119053109_669154464028736_1319092899898353971_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=NiXGvR0sHIUAX_K5Au0&tp=1&oh=b2dde859aadfda60ccbacefaf78214b2&oe=602D300C"
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQHMS6bfXH1zDA/profile-displayphoto-shrink_200_200/0/1619034429858?e=1657152000&v=beta&t=ysu4tLtKkV8gs1_AoZQGfM8j7TlQ4Wa_yc_0bxsV4wA"
                 class="storyphoto img-fluid"
               />
-            <span class="storytext mr-2">ozgeacik</span>
+            <span class="storytext mr-2">topuz.mert</span>
             </a>
-              <a href="https://www.instagram.com/kablosuzkedi" style="text-decoration: none;" target="_blank">
+              <a href="https://www.instagram.com/overdrive.tr" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/891383_1620336344912760_190799662_a.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=wSpwFcLtz80AX-U66oZ&oh=5be739ba968afed2145c0be933c6ffa6&oe=602ECE8C"
+                src="https://media-exp1.licdn.com/dms/image/C4E0BAQEojWHUeVQ1iQ/company-logo_200_200/0/1605719113362?e=2147483647&v=beta&t=6Kr-c9vegRVRmfRgeQGR49znV9OoLzbKP5tzAsnmIJg"
                 class="storyphoto img-fluid"
               />
-            <span class="storytext">kablosuzkedi</span>
+            <span class="storytext">overdrive.tr</span>
             </a>
-              <a href="https://www.instagram.com/gulcanyayla" style="text-decoration: none;" target="_blank">
+              <a href="https://www.instagram.com/maximusrobotics" style="text-decoration: none;" target="_blank">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/20066031_478409979176247_1637931957817966592_a.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=qVGZVeaAAyQAX-uPqnT&tp=1&oh=da209b286e6b9af6692a7eaab5db9fe7&oe=602C10BA"
+                src="https://media-exp1.licdn.com/dms/image/C4E0BAQF2RNM3X1xT3w/company-logo_200_200/0/1621614518781?e=2147483647&v=beta&t=90rouX_gSgFLTJ_sNiqdLFGPeagRqLpMiUeFtqoBBGA"
                 class="storyphoto img-fluid"
               />
-                <span class="storytext">gulcanyayla</span>
+                <span class="storytext">maximusro..</span>
             </a>
             </div>
           </div>
           <div class="card">
             <div class="card-header">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320"
+                src="https://pbs.twimg.com/profile_images/1239312474358329356/hvRWDG3r_400x400.jpg"
                 class="mr-2"
                 style="width: 35px; height: 35px; border-radius: 50%"
               />
-              <span class="postuserfont"><strong><a href="https://www.instagram.com/cengizcmataraci" target="_blank" style="color: black;">cengizcmataraci</a></strong></span>
-              <span class="mt-2"
+              <span class="postuserfont"><strong>atatorik</strong></span>
+              <span class="float-right mt-2"
                 ><strong><i class="fas fa-ellipsis-h"></i></strong
               ></span>
             </div>
@@ -165,7 +259,7 @@
             />
             <ul
               class="list-group list-group-horizontal mt-1"
-              style="list-style-type: none;"
+              style="list-style-type: none; border: 0"
             >
               <li class="nav-item">
                 <a class="nav-link" href="#"
@@ -201,7 +295,7 @@
                   ></i
                 ></a>
               </li>
-              <span class="">
+              <span class="offset-7">
                 <li class="nav-item ml-4">
                   <a class="nav-link ml-2" href="#"
                     ><i
@@ -214,19 +308,19 @@
             </ul>
             <span>
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/72779108_713693839133901_6123578952603664384_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=XqPxbR5poVwAX-ZBLnj&tp=1&oh=8ced290d281ab30c73ecab574c569f2e&oe=602E8762"
+                src="https://pbs.twimg.com/profile_images/1541055030014480386/G7D8MJ-o_400x400.jpg"
                 class="mb-1 ml-3"
                 style="width: 23px; height: 23px; border-radius: 50%"
               />
               <span class="postuserfont"
-                ><strong>furkantolgayuce</strong> ve
+                ><strong>yigtdogn</strong> ve
                 <strong>42 diğer kişi</strong> beğendi</span
               >
             </span>
             <div class="card-body" style="margin-top: -15px">
               <p class="card-text postuserfont">
                 <strong style="margin-left: -4px; margin-right: 5px"
-                  >cengizcmataraci</strong
+                  >atatorik</strong
                 >Burası Rize! Harika bir cennet!
               </p>
               <a href="#" style="text-decoration: none"
@@ -243,7 +337,7 @@
               >
               <p class="card-text postuserfont">
                 <strong style="margin-left: -4px; margin-right: 5px"
-                  >furkantolgayuce</strong
+                  >yigtdogn</strong
                 >Abi çok güzelmiş yaa! Bir gün götürürsün artık bizi de:)
               </p>
               <p class="card-text postuserfont" style="margin-top: -15px">
@@ -274,20 +368,20 @@
               "
             >
               <span style="margin-left: -4px">Yorum Ekle...</span
-              ><span class="" style="color: #0095f6; opacity: 50%"
+              ><span class="float-right" style="color: #0095f6; opacity: 50%"
                 ><strong>Paylaş</strong></span
               >
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-5 mb-3">
             <div class="card-header">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/105971749_581051382486071_1053777149100084988_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=VMAJoeqh5IwAX_QH3Nt&tp=1&oh=3bd9dbd2532c87e350dfcfffec74f120&oe=602BAC27"
+                src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg"
                 class="mr-2"
                 style="width: 35px; height: 35px; border-radius: 50%"
               />
               <span class="postuserfont"><strong>kodluyoruz</strong></span>
-              <span class="mt-2"
+              <span class="float-right mt-2"
                 ><strong><i class="fas fa-ellipsis-h"></i></strong
               ></span>
             </div>
@@ -298,7 +392,7 @@
             />
             <ul
               class="list-group list-group-horizontal mt-1"
-              style="list-style-type: none;"
+              style="list-style-type: none; border: 0"
             >
               <li class="nav-item">
                 <a class="nav-link" href="#"
@@ -334,7 +428,7 @@
                   ></i
                 ></a>
               </li>
-              <span class="">
+              <span class="offset-7">
                 <li class="nav-item ml-4">
                   <a class="nav-link ml-2" href="#"
                     ><i
@@ -347,12 +441,12 @@
             </ul>
             <span>
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320"
+                src="https://pbs.twimg.com/profile_images/1239312474358329356/hvRWDG3r_400x400.jpg"
                 class="mb-1 ml-3"
                 style="width: 23px; height: 23px; border-radius: 50%"
               />
               <span class="postuserfont"
-                ><strong>cengizcmataraci</strong> ve
+                ><strong>atatorik</strong> ve
                 <strong>670 diğer kişi</strong> beğendi</span
               >
             </span>
@@ -376,7 +470,7 @@
               >
               <p class="card-text postuserfont">
                 <strong style="margin-left: -4px; margin-right: 5px"
-                  >cengizcmataraci</strong
+                  >atatorik</strong
                 >Harika! Kesinlikle katılacağım! :)
               </p>
               <p class="card-text postuserfont" style="margin-top: -15px">
@@ -407,20 +501,20 @@
               "
             >
               <span style="margin-left: -4px">Yorum Ekle...</span
-              ><span class="" style="color: #0095f6; opacity: 50%"
+              ><span class="float-right" style="color: #0095f6; opacity: 50%"
                 ><strong>Paylaş</strong></span
               >
             </div>
           </div>
-          <div class="card mb-3">
+          <div class="card mt-5 mb-3">
             <div class="card-header">
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/44329317_268583430479565_454483638147350528_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=nch-8fZvL_kAX-Vwc1_&tp=1&oh=834a7ad23234699addd8c447d3d754e6&oe=602E6230"
+                src="https://static01.nyt.com/images/2020/05/09/business/09virus-musk/merlin_172073934_998b3d35-12fb-4dc2-bf92-4edfe8dc3068-mediumSquareAt3X.jpg"
                 class="mr-2"
                 style="width: 35px; height: 35px; border-radius: 50%"
               />
               <span class="postuserfont"><strong>elonrmuskk</strong></span>
-              <span class="mt-2"
+              <span class="float-right mt-2"
                 ><strong><i class="fas fa-ellipsis-h"></i></strong
               ></span>
             </div>
@@ -467,7 +561,7 @@
                   ></i
                 ></a>
               </li>
-              <span class="">
+              <span class="offset-7">
                 <li class="nav-item ml-4">
                   <a class="nav-link ml-2" href="#"
                     ><i
@@ -480,12 +574,12 @@
             </ul>
             <span>
               <img
-                src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320"
+                src="https://pbs.twimg.com/profile_images/1239312474358329356/hvRWDG3r_400x400.jpg"
                 class="mb-1 ml-3"
                 style="width: 23px; height: 23px; border-radius: 50%"
               />
               <span class="postuserfont"
-                ><strong>cengizcmataraci</strong> ve
+                ><strong>atatorik</strong> ve
                 <strong>900.182 diğer kişi</strong> beğendi</span
               >
             </span>
@@ -509,7 +603,7 @@
               >
               <p class="card-text postuserfont">
                 <strong style="margin-left: -4px; margin-right: 5px"
-                  >cengizcmataraci</strong
+                  >atatorik</strong
                 >Yeah! Here you go!
               </p>
               <p class="card-text postuserfont" style="margin-top: -15px">
@@ -540,13 +634,13 @@
               "
             >
               <span style="margin-left: -4px">Yorum Ekle...</span
-              ><span class="" style="color: #0095f6; opacity: 50%"
+              ><span class="float-right" style="color: #0095f6; opacity: 50%"
                 ><strong>Paylaş</strong></span
               >
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-12 col-md-6 d-sm-none d-md-block">
           <div
             class="card col-xs-12 rightpanel"
             id="sticky-sidebar"
@@ -558,7 +652,7 @@
                   >
                   <span>
                   <img
-                    src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/83792429_185184289374945_1047727451901263872_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=oor-Z1FIzvgAX-uXuhs&tp=1&oh=e92baf321c3e2e5ebf9416204da05c82&oe=602E0320"
+                    src="https://pbs.twimg.com/profile_images/1239312474358329356/hvRWDG3r_400x400.jpg"
                     class=""
                     style="
                       width: 60px;
@@ -577,7 +671,7 @@
                       color: black;
                       margin-left: 20px;
                     "
-                    ><strong>cengizcmataraci</strong>
+                    ><strong>atatorik</strong>
                     </span>
                   </span>
                 </a>
@@ -593,7 +687,7 @@
                     >Senin İçin Öneriler</span
                   >
                   <span
-                    class="postuserfont mt-1"
+                    class="float-right postuserfont mt-1"
                     style="font-size: 12px"
                     ><strong>Tümünü Gör</strong></span
                   >
@@ -602,16 +696,16 @@
                   <div>
                     <span
                       ><img
-                        src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/136764073_2862337494054607_1355990075667286005_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=3MHMOXdKP6cAX-WCyqg&tp=1&oh=ac33152da872b66e414b29d07b6c35ff&oe=602ED931"
+                        src="https://media-exp1.licdn.com/dms/image/C4E0BAQEojWHUeVQ1iQ/company-logo_200_200/0/1605719113362?e=2147483647&v=beta&t=6Kr-c9vegRVRmfRgeQGR49znV9OoLzbKP5tzAsnmIJg"
                         style="width: 30px; height: 30px; border-radius: 50%"
                       />
                     </span>
-                    <a href="https://www.instagram.com/kablosuzbeyin" target="_blank">
+                    <a href="https://www.instagram.com/overdrive.tr" target="_blank">
                     <span class="postuserfont ml-2 mt-1"
-                      ><strong>kablosuzbeyin</strong></span
+                      ><strong>overdrive.tr</strong></span
                     >
                     <span
-                      class="postuserfont"
+                      class="postuserfont float-right"
                       style="font-size: 13px; color: #0095f6; margin-top: 5px"
                       ><strong>Takip Et</strong></span
                     >
@@ -620,16 +714,16 @@
                   <div class="mt-3">
                     <span
                       ><img
-                        src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/135278730_818218959037021_4706682874061565439_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=ZcMoHQ8jKZgAX88HPLQ&tp=1&oh=2023068e1dfea5cccffd10bffecca9c4&oe=602F5808"
+                        src="https://media-exp1.licdn.com/dms/image/C4E0BAQF2RNM3X1xT3w/company-logo_200_200/0/1621614518781?e=2147483647&v=beta&t=90rouX_gSgFLTJ_sNiqdLFGPeagRqLpMiUeFtqoBBGA"
                         style="width: 30px; height: 30px; border-radius: 50%"
                       />
                     </span>
-                    <a href="https://www.instagram.com/codecraftcom" target="_blank">
+                    <a href="https://www.instagram.com/maximusrobotics" target="_blank">
                     <span class="postuserfont ml-2 mt-1"
-                      ><strong>codecraftcom </strong></span
+                      ><strong>Maximus Robotics</strong></span
                     >
                     <span
-                      class="postuserfont"
+                      class="postuserfont float-right"
                       style="font-size: 13px; color: #0095f6; margin-top: 5px"
                       ><strong>Takip Et</strong></span
                     >
@@ -638,7 +732,7 @@
                   <div class="mt-3">
                     <span
                       ><img
-                        src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/31495253_240585426490915_5836624022825074688_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=cPDm1HkyR00AX853Kwb&tp=1&oh=c8165bf46f38be25d28883123c419772&oe=602D147C"
+                        src="https://media-exp1.licdn.com/dms/image/C560BAQE7LQ_GtQ4VDQ/company-logo_200_200/0/1644003405950?e=2147483647&v=beta&t=trJS70BDAOotm_KmdhXZAuqTo9xqASlo4-JZTnrtfkY"
                         style="width: 30px; height: 30px; border-radius: 50%"
                       />
                     </span>
@@ -647,7 +741,7 @@
                       ><strong>navlungotr</strong></span
                     >
                     <span
-                      class="postuserfont"
+                      class="postuserfont float-right"
                       style="font-size: 13px; color: #0095f6; margin-top: 5px"
                       ><strong>Takip Et</strong></span
                     >
@@ -656,7 +750,7 @@
                   <div class="mt-3">
                     <span
                       ><img
-                        src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/94766381_265471701511060_6041416400029876224_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=mQMQvy2AF8QAX887wrH&tp=1&oh=4670ba101eddc6e0f54b15f53b432ff5&oe=602F5C23"
+                        src="data:image/png;base64,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"
                         style="width: 30px; height: 30px; border-radius: 50%"
                       />
                     </span>
@@ -665,7 +759,7 @@
                       ><strong>podfreshco</strong></span
                     >
                     <span
-                      class="postuserfont"
+                      class="postuserfont float-right"
                       style="font-size: 13px; color: #0095f6; margin-top: 5px"
                       ><strong>Takip Et</strong></span
                     >
@@ -673,7 +767,7 @@
                   <div class="mt-3">
                     <span
                       ><img
-                        src="https://scontent-otp1-1.cdninstagram.com/v/t51.2885-19/s150x150/121780232_471629500408445_1284251206825421967_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_ohc=pF5Lhq2mP3gAX_M_HUg&tp=1&oh=84447ff663f0e15901cf8b446bb9fa18&oe=602DD5CA"
+                        src="https://pbs.twimg.com/profile_images/1477909167021166592/lcaJcW5h_400x400.jpg"
                         style="width: 30px; height: 30px; border-radius: 50%"
                       />
                     </span>
@@ -682,7 +776,7 @@
                       ><strong>Kodluyoruz Junior</strong></span
                     >
                     <span
-                      class="postuserfont"
+                      class="postuserfont float-right"
                       style="font-size: 13px; color: #0095f6; margin-top: 5px"
                       ><strong>Takip Et</strong></span
                     >
@@ -693,7 +787,7 @@
                   <span><a href="https://about.instagram.com/" target="_blank" class="rightpanellinks">Hakkında</a> <a href="https://help.instagram.com/" target="_blank" class="rightpanellinks">Yardım</a> <a href="https://about.instagram.com/blog/" class="rightpanellinks">Basın</a> <a href="https://www.instagram.com/developer/" class="rightpanellinks">API</a> <a href="https://www.instagram.com/about/jobs/" class="rightpanellinks">İş Fırsatları</a> <a href="https://www.instagram.com/legal/privacy/" class="rightpanellinks">Gizlilik</a></span>
                     <span><a href="https://www.instagram.com/legal/terms/" class="rightpanellinks">Koşullar</a> <a href="https://www.instagram.com/explore/locations/" class="rightpanellinks">Konumlar</a> <a href="https://www.instagram.com/directory/profiles/" class="rightpanellinks">Başlıca Hesaplar</a> <a href="https://www.instagram.com/directory/hashtags/" class="rightpanellinks">Konu Etiketleri</a> Dil</span>
                     <p></p>
-                  <p style="font-size: 12px;">© 2021 INSTAGRAM FROM KODLUYORUZ</p>
+                  <p style="font-size: 12px;">© 2022 INSTAGRAM BY YIGIT DOGAN FOR PATIKA</p>
                 </div>
               </div>
             </div>
