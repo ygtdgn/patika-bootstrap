@@ -1,2 +1,2 @@
-# instagrambootstrapclone
-Simple HTML Instagram clone made with Bootstrap.
+# Patika Bootstrap Task-2
+Instagram clone with HTML & Bootstrap
